@@ -6,7 +6,7 @@ namespace IF4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ohjelma selvittää kolmen syötetyn luvun korkeusjärjestyksen.");
+            Console.WriteLine("Ohjelma selvittää kolmen syötetyn lukua nousevaan järjestykseen.");
 
             Console.Write("Syötä ensimmäinen luku: ");
             string userInput = Console.ReadLine();
@@ -21,23 +21,23 @@ namespace IF4
             if (numberA > numberB)
             {
                 if (numberA > numberC)
-                    Console.WriteLine($"Järjestys on {numberA} > {numberB} > {numberC}");
+                    Console.WriteLine($"Järjestys on {numberC} > {numberB} > {numberA}");
                 else
-                    Console.WriteLine($"Järjestys on {numberC} > {numberA} > {numberB}");
+                    Console.WriteLine($"Järjestys on {numberB} > {numberA} > {numberC}");
             }
             else if (numberB > numberC)
             {
                 if (numberC > numberA)
-                    Console.WriteLine($"Järjestys on {numberB} > {numberC} > {numberA}");
+                    Console.WriteLine($"Järjestys on {numberA} - {numberC} - {numberB}");
                 else
-                    Console.WriteLine($"Järjestys on {numberB} > {numberA} > {numberC}");
+                    Console.WriteLine($"Järjestys on {numberC} - {numberA} - {numberB}");
             }
             else if (numberC > numberA)
             {
                 if (numberB > numberA)
-                    Console.WriteLine($"Järjestys on {numberC} > {numberB} > {numberA}");
+                    Console.WriteLine($"Järjestys on {numberA} - {numberB} - {numberC}");
                 else
-                    Console.WriteLine($"Järjestys on {numberA} > {numberC} > {numberB}");
+                    Console.WriteLine($"Järjestys on {numberB} - {numberC} - {numberA}");
             }
 
         }
