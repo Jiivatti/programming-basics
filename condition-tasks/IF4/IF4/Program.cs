@@ -6,7 +6,7 @@ namespace IF4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ohjelma selvittää kolmen syötetyn lukua nousevaan järjestykseen.");
+            Console.WriteLine("Ohjelma järjestää kolme syötettyä lukua nousevaan järjestykseen.");
 
             Console.Write("Syötä ensimmäinen luku: ");
             string userInput = Console.ReadLine();
