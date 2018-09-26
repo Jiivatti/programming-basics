@@ -7,6 +7,7 @@ namespace IF4
         static void Main(string[] args)
         {
             Console.WriteLine("Ohjelma selvittää kolmen syötetyn luvun korkeusjärjestyksen.");
+
             Console.Write("Syötä ensimmäinen luku: ");
             string userInput = Console.ReadLine();
             int numberA = int.Parse(userInput);
@@ -16,19 +17,20 @@ namespace IF4
             Console.Write("Syötä kolmas luku: ");
             userInput = Console.ReadLine();
             int numberC = int.Parse(userInput);
+
             if (numberA > numberB)
             {
-                if (numberB > numberC)
+                if (numberA > numberC)
                     Console.WriteLine($"Järjestys on {numberA} > {numberB} > {numberC}");
                 else
                     Console.WriteLine($"Järjestys on {numberC} > {numberA} > {numberB}");
             }
             else if (numberB > numberC)
             {
-                if (numberA > numberC)
-                    Console.WriteLine($"Järjestys on {numberB} > {numberA} > {numberC}");
+                if (numberC > numberA)
+                    Console.WriteLine($"Järjestys on {numberB} > {numberC} > {numberA}");
                 else
-                    Console.WriteLine($"Järjestys on {numberC} > {numberB} > {numberA}");
+                    Console.WriteLine($"Järjestys on {numberB} > {numberA} > {numberC}");
             }
             else if (numberC > numberA)
             {
