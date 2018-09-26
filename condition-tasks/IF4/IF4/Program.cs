@@ -21,9 +21,9 @@ namespace IF4
             if (numberA > numberB)
             {
                 if (numberA > numberC)
-                    Console.WriteLine($"Järjestys on {numberC} > {numberB} > {numberA}");
+                    Console.WriteLine($"Järjestys on {numberC} - {numberB} - {numberA}");
                 else
-                    Console.WriteLine($"Järjestys on {numberB} > {numberA} > {numberC}");
+                    Console.WriteLine($"Järjestys on {numberB} - {numberA} - {numberC}");
             }
             else if (numberB > numberC)
             {
