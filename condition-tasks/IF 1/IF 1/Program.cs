@@ -4,13 +4,13 @@ namespace IF_1
 {
     class Program
     {
-        static void Main(string[] args) //This shit looks hard huh?
+        static void Main(string[] args) //Kommentti :D
         {
             Console.WriteLine("Ohjelma selvittää, onko syötetty luku positiivinen, " +
                 "negatiivinen vai nolla.");
             Console.Write("Syötä numero: ");
             string userInput = Console.ReadLine(); //"userInput" on osoitettu muuttujaksi
-            int muuttuja = int.Parse(userInput); //"muuttuja" on toinen... muuttuja
+            int muuttuja = int.Parse(userInput); 
             if (muuttuja == 0)
                 Console.WriteLine($"Numero {muuttuja} on nolla.");
             else if (muuttuja < 0)
