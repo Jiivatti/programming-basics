@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopTask3-2", "LoopTask3-2\LoopTask3-2.csproj", "{D04A54C5-347C-4379-B153-FF65840F0286}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopTask3-2", "LoopTask3-2\LoopTask3-2.csproj", "{D04A54C5-347C-4379-B153-FF65840F0286}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopTasks3-1", "..\..\programming-basics\loop-tasks\LoopTasks3-1\LoopTasks3-1\LoopTasks3-1.csproj", "{491B73F6-BBCE-437B-8868-26883806797E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopTasks3-1", "..\LoopTasks3-1\LoopTasks3-1\LoopTasks3-1.csproj", "{BB84CBC3-1230-418D-AF22-7D5A32C93498}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D04A54C5-347C-4379-B153-FF65840F0286}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D04A54C5-347C-4379-B153-FF65840F0286}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D04A54C5-347C-4379-B153-FF65840F0286}.Release|Any CPU.Build.0 = Release|Any CPU
-		{491B73F6-BBCE-437B-8868-26883806797E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{491B73F6-BBCE-437B-8868-26883806797E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{491B73F6-BBCE-437B-8868-26883806797E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{491B73F6-BBCE-437B-8868-26883806797E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB84CBC3-1230-418D-AF22-7D5A32C93498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB84CBC3-1230-418D-AF22-7D5A32C93498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB84CBC3-1230-418D-AF22-7D5A32C93498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB84CBC3-1230-418D-AF22-7D5A32C93498}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
