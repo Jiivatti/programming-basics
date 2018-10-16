@@ -14,14 +14,14 @@ namespace LoopTask3_4
             Console.Write("Syötä luku: ");
             X = int.Parse(Console.ReadLine());
 
-            if (X > 0)
+            if (X >= 0)
                 while (i <= X)
                 {
                     sum = sum + 1;
                     i = i + 1;
                 }
             else
-                while (i >= X)
+                while (i <= X)
                 {
                     sum = sum + 1;
                     i = i - 1;
