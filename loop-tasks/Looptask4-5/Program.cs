@@ -12,9 +12,9 @@ namespace Looptask4_5
             for (int i = 1; i < 14; i++)
             {
                 double muuttuja = rnd.NextDouble();
-                if (muuttuja < 0.4)
+                if (muuttuja <= 0.4)
                     Console.WriteLine($"{i}\t. 1");
-                else if (muuttuja > 0.6)
+                else if (muuttuja > 0.4 && muuttuja < 0.7)
                     Console.WriteLine($"{i}\t. X");
                 else
                     Console.WriteLine($"{i}\t. 2");

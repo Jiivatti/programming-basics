@@ -6,7 +6,7 @@ namespace LoopTask4_3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ohjelma tulostaa 20 satunnaista lukua väliltä 1-50, ja tulostaa ne viidelle riville.");
+            Console.WriteLine("Ohjelma tulostaa 20 satunnaista lukua väliltä 1-50, ja tulostaa ne neljälle riville.");
 
             Random rnd = new Random();
 

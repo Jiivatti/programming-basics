@@ -7,7 +7,7 @@ namespace LoopTask4_4
         static void Main(string[] args)
         {
             Console.WriteLine("Ohjelma heittää mielikuvituksellista kolikkoa puolestasi, ja kertoo kruunien ja klaavojen määrän.");
-            Console.Write("Montako heittoa saisi olla?");
+            Console.Write("Montako heittoa saisi olla? ");
             string userInput = Console.ReadLine();
             int counter = int.Parse(userInput);
             int heads = 0;

@@ -26,7 +26,7 @@ namespace LoopTask4_6
                     x++;
                 }
 
-                Console.WriteLine($"{i}\t {randomRnd}");
+                Console.WriteLine($"{i}.\t {randomRnd}");
             }
             Console.WriteLine($"Numero 6 heitettiin {x} kertaa. ");
         }
