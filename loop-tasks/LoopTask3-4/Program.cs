@@ -17,13 +17,13 @@ namespace LoopTask3_4
             if (X >= 0)
                 while (i <= X)
                 {
-                    sum = sum + 1;
+                    sum = sum + i;
                     i = i + 1;
                 }
             else
-                while (i <= X)
+                while (i >= X)
                 {
-                    sum = sum + 1;
+                    sum = sum + i;
                     i = i - 1;
                 }
 

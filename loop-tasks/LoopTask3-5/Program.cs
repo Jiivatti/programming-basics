@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LoopTask3_3
+namespace LoopTask3_5
 {
     class Program
     {
@@ -29,8 +29,8 @@ namespace LoopTask3_3
                     }
                     i++;
                 }
-            }
-            else
+            }            else
+
             {
                 while (i >= X)
                 {
