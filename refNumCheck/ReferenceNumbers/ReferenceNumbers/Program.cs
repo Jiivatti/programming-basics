@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace ReferenceNumbers
 {
@@ -7,6 +8,7 @@ namespace ReferenceNumbers
         static void Main(string[] args)
         {
             string choice = null;
+            
 
             do
             {
@@ -15,20 +17,24 @@ namespace ReferenceNumbers
                 switch (choice.ToUpper())
                 {
                     case "Q":
-                        Console.WriteLine("Input reference number: ");
+                        Console.Write("Input reference number: ");
                         string refNum = Console.ReadLine();
                         if (Checker(refNum) == false)
                         {
-                            Console.WriteLine("The reference number is incorrect.");
+                            Console.WriteLine("The reference number is incorrect.\n");
                         }
                         else
                         {
-                            Console.WriteLine("The reference number is correct!");
+                            Console.WriteLine("The reference number is correct!\n");
                         }
                         break;
 
                     case "W":
-                        NCreator();
+                        SCreator();
+                        break;
+
+                    case "E":
+                        MCreator();
                         break;
                 }
             } while (choice.ToUpper() != "F");
@@ -37,8 +43,9 @@ namespace ReferenceNumbers
             string UInterface()
             {
                 Console.WriteLine("[Q] -- Test a reference number");
-                Console.WriteLine("[W] -- Create new a reference number");
-                Console.WriteLine("[F] -- Close program");
+                Console.WriteLine("[W] -- Create a new reference number");
+                Console.WriteLine("[E] -- Generate multiple references and save to file");
+                Console.WriteLine("[F] -- Close program\n");
 
                 return Console.ReadLine();
             }
@@ -90,7 +97,7 @@ namespace ReferenceNumbers
             }
         }
 
-        public static void NCreator()
+        public static void SCreator()
         {
             Console.Write("Input a seed consisting of 3-19 numbers to generate from: ");
             string seed = Console.ReadLine();
@@ -137,6 +144,64 @@ namespace ReferenceNumbers
 
                 Console.WriteLine($"Your new reference number is: {newNumb}");
             }
+        }
+        public static void MCreator()
+        {
+            string path = @"c:\temp\referencenumbers.txt";
+            Random rng = new Random();
+            Console.Write("\nInput a seed consisting of 3-19 numbers to generate from: ");
+            string seed = Console.ReadLine();
+            Console.Write("Input the amount of reference numbers to generate: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            for (int k = 0; k < n; k++)
+            {
+                int g = rng.Next(10);
+                seed = seed + g;
+                int[] multiply = new int[] { 7, 3, 1 };
+                int[] refArr = new int[seed.Length];
+                int sum = 0;
+
+                for (int i = 0; i < seed.Length; i++)
+                {
+                    refArr[i] = int.Parse(seed[i].ToString());
+                }
+
+                for (int i = 0; i < refArr.Length; i++)
+                {
+                    sum += refArr[refArr.Length - 1 - i] * multiply[i % 3];
+                }
+
+                int checkSum = 10 - (sum % 10);
+                if (checkSum == 10)
+                {
+                    checkSum = 0;
+                }
+
+                string newNumb = seed + checkSum;
+
+                for (int i = 1; i < newNumb.Length; i++)
+                {
+                    if (i % 5 == 0)
+                    {
+                        newNumb = newNumb.Insert(i, " ");
+                    }
+                }
+
+                Console.WriteLine($"Number {k+1}: {newNumb}");
+
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    for (int i = 0; i < n; i++)
+                    {
+                        sw.WriteLine($"{newNumb}   ");
+                    }
+                }
+                
+            }
+            Console.ReadKey();
+            Console.Clear();
+
         }
     }
 }
