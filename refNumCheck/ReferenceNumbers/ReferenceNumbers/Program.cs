@@ -21,13 +21,13 @@ namespace ReferenceNumbers
                         string refNum = Console.ReadLine();
                         if (Checker(refNum) == false)
                         {
-                            Console.WriteLine("The reference number is incorrect.\n");
+                            Console.WriteLine("\nThe reference number is incorrect.\n");
                             Console.ReadKey();
                             Console.Clear();
                         }
                         else
                         {
-                            Console.WriteLine("The reference number is correct!\n");
+                            Console.WriteLine("\nThe reference number is correct!\n");
                             Console.ReadKey();
                             Console.Clear();
                         }
