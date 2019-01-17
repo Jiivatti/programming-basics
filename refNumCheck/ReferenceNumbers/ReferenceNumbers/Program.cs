@@ -40,11 +40,12 @@ namespace ReferenceNumbers
                     case "E":
                         MCreator();
                         break;
+                        
                 }
             } while (choice.ToUpper() != "F");
 
 
-            string UInterface()
+            string UInterface() // Switch case-rakenteen kanssa toimiva käyttöliittymä
             {
                 Console.WriteLine("[Q] -- Test a reference number");
                 Console.WriteLine("[W] -- Create a new reference number");
@@ -52,7 +53,7 @@ namespace ReferenceNumbers
                 Console.WriteLine("[F] -- Close program\n");
 
                 return Console.ReadLine();
-            } // Switch casen-rakenteen kanssa toimiva käyttöliittymä
+            } 
         }
 
         public static bool Checker(string refNum) // Funktio tarkistaa parametrinä välitetyn viitenumeron tarkisteen oikeellisuuden, ja palauttaa
@@ -166,7 +167,7 @@ namespace ReferenceNumbers
                 Console.Clear();
             }
         }
-        public static void MCreator() // Funktio luo käyttäjän haluaman määrän uusia viitenumeroita, ja tallentaa ne tiedostoon referencenumbers.txt
+        public static void MCreator() // Funktio generoi käyttäjän haluaman määrän uusia viitenumeroita, ja tallentaa ne tiedostoon referencenumbers.txt
         {
             string path = @"c:\temp\referencenumbers.txt";
             
@@ -174,6 +175,7 @@ namespace ReferenceNumbers
             string seed = Console.ReadLine();
             Console.Write("Input the amount of reference numbers to generate: ");
             int n = Convert.ToInt32(Console.ReadLine());
+            
 
             if (seed.Length > 19)
             {
@@ -204,7 +206,7 @@ namespace ReferenceNumbers
                 for (int k = 0; k < n; k++)
                 {
                     Random rng = new Random();
-                    int g = rng.Next(10); // Keksi parempi ratkaisu, algoritmi toimii sikäli mutta rng ei uusi arvoaan jokaisella kierroksella.
+                    int g = rng.Next(11);
                     seed = seed + g;
                     int[] multiply = new int[] { 7, 3, 1 };
                     int[] refArr = new int[seed.Length];
@@ -236,16 +238,13 @@ namespace ReferenceNumbers
                         }
                     }
 
-                    Console.WriteLine($"Number {k + 1}: {newNumb}");
+                    Console.WriteLine($"Reference number {k + 1}: {newNumb}");
 
-                    using (StreamWriter sw = new StreamWriter(path)) // Tässä muodossaan ohjelma tallentaa vain ensimmäisen generoidun numeron useaan kertaan.
+
+                    using (StreamWriter sw = File.AppendText(path))
                     {
-                        for (int i = 0; i < n; i++)
-                        {
-                            sw.WriteLine($"{newNumb}   ");  // Löydä parempi tapa!
-                        }
+                        sw.WriteLine($"Reference number {k + 1}: {newNumb}");
                     }
-
                 }
                 Console.ReadKey();
                 Console.Clear();
