@@ -15,10 +15,10 @@ namespace ArrayTask1_2
 
             for (int i = 0; i < luvut.Length; i++)
             {
-                luvut[i] = rnd.Next(50);
-                sum += luvut[i];
+                luvut[i] = rnd.Next(51);
+                sums += luvut[i];
                 Console.WriteLine($"{i + 1}. {luvut[i]}");
-                average = sum / luvut.Length;
+                average = sums / luvut.Length;
             }
 
             Console.WriteLine($"Arvottujen lukujen keskiarvo on {average}. ");
